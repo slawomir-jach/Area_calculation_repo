@@ -1,18 +1,18 @@
 
 global source
-source = [7,5,3,7,4]
+source = [2,7,5,3,7,4]
 
 
-def solution(H):
+def solution(H):                           # Finding high number in the list
     global higestBuilding
     higestBuilding = max(H)
     findPosition = H.index(higestBuilding)
     return higestBuilding
 
+
 def findHigest(number):
     higestBuilding = max(number)
     return higestBuilding
-
 
 
 def positionDubleFind(seq, item):

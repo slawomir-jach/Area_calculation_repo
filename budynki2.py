@@ -1,15 +1,19 @@
-def list_duplicates_of(seq, item):
+def list_duplicates_of(lista, szukany_element):
     start_at = -1
-    list = []
+    docelowa_lista = []
     while True:
         try:
-            loc = seq.index(item, start_at+1)
+
+            location = lista.index(szukany_element, start_at +1)
+            print(location)
         except ValueError:
             break
         else:
-            list.append(loc)
-            start_at = loc
-    return list
+            docelowa_lista.append(location)
+            start_at = location
+    return docelowa_lista
 
-source = "ABABDBAAEDSBQEWBAFLSAFB"
-print(list_duplicates_of(source, 'B'))
+
+source_lista = "ABABDBAAEDSBQEWBAFLSAFB"
+
+print(list_duplicates_of(source_lista, 'B'))
